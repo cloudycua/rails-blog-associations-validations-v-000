@@ -1,28 +1,28 @@
-class TagsController < ApplicationController
+lass TagsController < ApplicationController
   before_action :set_tag, only: [:show, :edit, :update, :destroy]
 
-  # GET /posts
-  # GET /posts.json
+  # GET /tags
+  # GET /tags.json
   def index
     @tags = Tag.all
   end
 
-  # GET /posts/1
-  # GET /posts/1.json
+  # GET /tags/1
+  # GET /tags/1.json
   def show
   end
 
-  # GET /posts/new
+  # GET /tags/new
   def new
     @tag = Tag.new
   end
 
-  # GET /posts/1/edit
+  # GET /tags/1/edit
   def edit
   end
 
-  # POST /posts
-  # POST /posts.json
+  # POST /tags
+  # POST /tags.json
   def create
     @tag = Tag.new(tag_params)
 
@@ -37,8 +37,8 @@ class TagsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /posts/1
-  # PATCH/PUT /posts/1.json
+  # PATCH/PUT /tags/1
+  # PATCH/PUT /tags/1.json
   def update
     respond_to do |format|
       if @tag.update(tag_params)
@@ -51,8 +51,8 @@ class TagsController < ApplicationController
     end
   end
 
-  # DELETE /posts/1
-  # DELETE /posts/1.json
+  # DELETE /tags/1
+  # DELETE /tags/1.json
   def destroy
     @tag.destroy
     respond_to do |format|
