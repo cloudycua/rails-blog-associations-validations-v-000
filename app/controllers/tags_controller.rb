@@ -41,12 +41,12 @@ class TagsController < ApplicationController
   # PATCH/PUT /posts/1.json
   def update
     respond_to do |format|
-      if @post.update(post_params)
-        format.html { redirect_to @post, notice: 'Post was successfully updated.' }
+      if @tag.update(tag_params)
+        format.html { redirect_to @tag, notice: 'Post was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
+        format.json { render json: @tag.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -54,9 +54,9 @@ class TagsController < ApplicationController
   # DELETE /posts/1
   # DELETE /posts/1.json
   def destroy
-    @post.destroy
+    @tag.destroy
     respond_to do |format|
-      format.html { redirect_to posts_url }
+      format.html { redirect_to tags_url }
       format.json { head :no_content }
     end
   end
