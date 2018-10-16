@@ -7,8 +7,8 @@
   <%= @post.content %>
   <h3>Tags:</h3>
   <ul>
-    <% @post.tags.each do |tag| %>
-    <li><%= tag.name %></li>
+    <% @post.tags.each do |t| %>
+    <li><%= link_to t.name, tag_path(t) %></li>
     <% end %>
   </ul>
 </p>
