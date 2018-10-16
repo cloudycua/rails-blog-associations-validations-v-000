@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_puser only: [:show, :edit, :update, :destroy]
+  before_action :set_user only: [:show, :edit, :update, :destroy]
 
   # GET /posts
   # GET /posts.json
