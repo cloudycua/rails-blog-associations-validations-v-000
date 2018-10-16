@@ -24,11 +24,11 @@ class UsersController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-    @user = Post.new(user_params)
+    @user = User.new(user_params)
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'Post was successfully created.' }
+        format.hUser{ redirect_to @user, notice: 'Post was successfully created.' }
         format.json { render action: 'show', status: :created, location: @post }
       else
         format.html { render action: 'new' }
@@ -42,7 +42,7 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(post_params)
-        format.html { redirect_to @user, notice: 'Post was successfully updated.' }
+        format.hUser{ redirect_to @user, notice: 'Post was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
