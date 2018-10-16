@@ -14,7 +14,7 @@ class TagsController < ApplicationController
 
   # GET /posts/new
   def new
-    @post = Post.new
+    @tag = Tag.new
   end
 
   # GET /posts/1/edit
