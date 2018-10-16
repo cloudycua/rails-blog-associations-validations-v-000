@@ -1,10 +1,10 @@
-class PostsController < ApplicationController
+class UsersController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = User.all
   end
 
   # GET /posts/1
@@ -14,7 +14,7 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
-    @post = Post.new
+    @post = User.new
   end
 
   # GET /posts/1/edit
